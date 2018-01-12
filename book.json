@@ -4,7 +4,6 @@
     "plugins": [
         "search",
         "theme-faq",
-        "-lunr",
         "-fontsettings",
         "-sharing"
     ],
