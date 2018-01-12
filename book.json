@@ -8,6 +8,6 @@
         "-sharing"
     ],
     "structure": {
-        "readme": "home.md"
+        "readme": "HOME.md"
     }
 }
