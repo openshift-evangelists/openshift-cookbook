@@ -3,6 +3,7 @@
 ## OpenShift Container Platform
 
 * [What is OpenShift?](openshift-container-platform/what-is-openshift.md)
+* [What is the difference between OpenShift and Kubernetes?](openshift-container-platform/what-is-the-difference-between-openshift-and-kubernetes.md)
 
 ## Accessing an OpenShift Cluster
 
