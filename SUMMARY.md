@@ -2,8 +2,7 @@
 
 ## OpenShift Container Platform
 
-* [Introduction](INTRO.md)
-* [What is OpenShift?](basics/what-is-openshift.md)
+* [What is OpenShift?](openshift-container-platform/what-is-openshift.md)
 
 ## Accessing an OpenShift Cluster
 
