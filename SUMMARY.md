@@ -6,6 +6,8 @@
 
 ## Accessing an OpenShift Cluster
 
+* [What URL do I use when logging in from the command line?](accessing-an-openshift-cluster/what-url-do-i-use-when-logging-if-from-the-command-line.md)
+
 ## Projects and User Collaboration
 
 ## Deploying Applications From Images
