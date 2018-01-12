@@ -22,3 +22,5 @@
 ## Application Lifecycle Management
 
 ## Logging, Monitoring and Debugging
+
+## Working with Resources Objects
