@@ -34,3 +34,7 @@
 ## Image Registry and Image Streams
 
 ## Service Catalog and Templates
+
+## Automated CI/CD Build Pipelines
+
+## Java Application Middleware
