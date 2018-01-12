@@ -5,6 +5,10 @@
 * [Introduction](home.md)
 * [What is OpenShift?](basics/what-is-openshift.md)
 
+## Accessing an OpenShift Cluster
+
+## Projects and User Collaboration
+
 ## Deploying Applications From Images
 
 ## Building and Deploying From Source
@@ -24,3 +28,9 @@
 ## Logging, Monitoring and Debugging
 
 ## Working with Resources Objects
+
+## Users and Role Based Access Control
+
+## Image Registry and Image Streams
+
+## Service Catalog and Templates
