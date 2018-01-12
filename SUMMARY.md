@@ -4,6 +4,11 @@
 
 * [What is OpenShift?](openshift-container-platform/what-is-openshift.md)
 * [What is the difference between OpenShift and Kubernetes?](openshift-container-platform/what-is-the-difference-between-openshift-and-kubernetes.md)
+* [What books are available about OpenShift?](openshift-container-platform/what-books-are-available-about-openshift.md)
+* [Where can I try out OpenShift?](openshift-container-platform/where-can-i-try-out-openshift.md)
+* [How can I run OpenShift on my own computer for development?](openshift-container-platform/how-can-i-run-openshift-on-my-own-computer-for-development.md)
+* [How can I install OpenShift for use with production applications?](openshift-container-platform/how-can-i-install-openshift-for-use-with-production-applications.md)
+* [What hosting services are there that use OpenShift?](openshift-container-platform/what-hosting-services-are-there-that-use-openshift.md)
 
 ## Accessing an OpenShift Cluster
 
