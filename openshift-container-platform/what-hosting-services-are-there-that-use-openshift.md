@@ -1,0 +1,5 @@
+[OpenShift Online](https://www.openshift.com/get-started/) is Red Hat’s publicly hosted OpenShift service. If you do not want to install and manage your own OpenShift cluster, this is the option for you.
+
+OpenShift Online provides a free starter tier, intended for experimentation, testing or development. When you are ready to move your application to production and make it available to others to use, or you need additional resources beyond that provided by the free tier, you can upgrade to the paid tier. You can find more information on the differences between the free and paid tiers in the OpenShift Online [plans and pricing guide](https://www.openshift.com/pricing/index.html).
+
+Outgrow OpenShift Online, but still do not want to install and manage OpenShift yourself, Red Hat also offers [OpenShift Dedicated](https://www.openshift.com/dedicated/). This service is similar to OpenShift Online but the OpenShift cluster is reserved for your use and is not shared by other users outside of your organization.
