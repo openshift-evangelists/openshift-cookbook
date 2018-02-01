@@ -1,6 +1,6 @@
 ---
 related:
-    - what-hosting-services-are-there-that-use-openshift.md
+    - openshift-container-platform/what-hosting-services-are-there-that-use-openshift.md
 ---
 
 To learn more about OpenShift without needing to install it yourself you can use the [interactive learning portal](https://learn.openshift.com) for OpenShift. This provides a set of guided exercises that you can work through to learn about using OpenShift to deploy applications.
