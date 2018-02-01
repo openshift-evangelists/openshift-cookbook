@@ -1,3 +1,8 @@
+---
+related:
+    projects-and-user-collaboration/why-when-i-try-to-create-a-new-project-does-it-keep-failing.md
+---
+
 Projects can be created from the command line by using the ``oc new-project`` command.
 
 ```
