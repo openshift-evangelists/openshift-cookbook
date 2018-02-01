@@ -9,18 +9,18 @@ To view details of the service account created, run ``oc describe`` on the servi
 
 ```
 $ oc describe sa robot
-Name:		robot
-Namespace:	cookbook
-Labels:		<none>
-Annotations:	<none>
+Name:        robot
+Namespace:   cookbook
+Labels:      <none>
+Annotations: <none>
 
-Image pull secrets:	robot-dockercfg-vl9qn
+Image pull secrets: robot-dockercfg-vl9qn
 
-Mountable secrets: 	robot-token-mhf9x
-                   	robot-dockercfg-vl9qn
+Mountable secrets:  robot-token-mhf9x
+                    robot-dockercfg-vl9qn
 
-Tokens:            	robot-token-4nkdw
-                   	robot-token-mhf9x
+Tokens:             robot-token-4nkdw
+                    robot-token-mhf9x
 ```
 
 Secrets for two access tokens will be created.
@@ -33,20 +33,20 @@ To view the access token, run ``oc describe`` on the secret.
 
 ```
 $ oc describe secret robot-token-4nkdw
-Name:		robot-token-4nkdw
-Namespace:	cookbook
-Labels:		<none>
-Annotations:	kubernetes.io/created-by=openshift.io/create-dockercfg-secrets
-		kubernetes.io/service-account.name=robot
+Name:        robot-token-4nkdw
+Namespace:   cookbook
+Labels:      <none>
+Annotations: kubernetes.io/created-by=openshift.io/create-dockercfg-secrets
+             kubernetes.io/service-account.name=robot
 
 Type:	kubernetes.io/service-account-token
 
 Data
 ====
-ca.crt:		1070 bytes
-namespace:	8 bytes
-service-ca.crt:	2186 bytes
-token:		eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...
+ca.crt:         1070 bytes
+namespace:      8 bytes
+service-ca.crt: 2186 bytes
+token:          eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
 The token will not expire. If you need to revoke the access token you can delete the secret for the access token using ``oc delete`` and a new secret will be created.
