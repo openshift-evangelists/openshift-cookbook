@@ -3,7 +3,7 @@ related:
     - accessing-an-openshift-cluster/what-url-do-i-use-when-logging-if-from-the-command-line.md
 ---
 
-If you do not already have the ``oc`` command line tool, you can download the version corresponding to the OpenShift cluster you are using, from the web console.
+If you do not already have the ``oc`` command line tool, you can download the version corresponding to the OpenShift cluster you are using, from the _Command Line Tools_ option under the help menu
 
 ![Command Line Tools Menu Option](command-line-tools-download.png)
 
