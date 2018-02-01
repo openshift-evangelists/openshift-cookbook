@@ -19,6 +19,10 @@
 
 ## Projects and User Collaboration
 
+* [How do I create a new project from the command line?](projects-and-user-collaboration/how-do-i-create-a-new-project-from-the-command-line.md)
+* [Why when I try to create a new project does it keep failing?](projects-and-user-collaboration/why-when-i-try-to-create-a-new-project-does-it-keep-failing.md)
+* [How do I allow another user to work on my project?](projects-and-user-collaboration/how-do-i-allow-another-user-to-work-on-my-project.md)
+
 ## Deploying Applications From Images
 
 ## Building and Deploying From Source
