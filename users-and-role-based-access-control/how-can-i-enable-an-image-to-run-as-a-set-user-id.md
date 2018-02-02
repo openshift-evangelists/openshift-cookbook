@@ -1,6 +1,6 @@
 ---
 related:
-    users-and-role-based-access-control/why-do-my-applications-run-as-a-random-user-id.md
+    - users-and-role-based-access-control/why-do-my-applications-run-as-a-random-user-id.md
 ---
 
 When an application is deployed it will run as a user ID unique to the project it is running in. This overrides the user ID which the application image defines it wants to be run as. That the application is run as a different user ID can result in it failing to start.
