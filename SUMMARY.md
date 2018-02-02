@@ -25,6 +25,8 @@
 
 ## Deploying Applications From Images
 
+* [How do I deploy an application image from DockerHub?](deploying-applications-from-images/how-do-i-deploy-an-application-image-from-dockerhub.md)
+
 ## Building and Deploying From Source
 
 ## Application Configuration and Secrets
@@ -46,6 +48,9 @@
 ## Working with Resources Objects
 
 ## Users and Role Based Access Control
+
+* [Why do my applications run as a random user ID?](users-and-role-based-access-control/why-do-my-applications-run-as-a-random-user-id.md)
+* [How can I enable an image to run as a set user ID?](users-and-role-based-access-control/how-can-i-enable-an-image-to-run-as-a-set-user-id.md)
 
 ## Image Registry and Image Streams
 
