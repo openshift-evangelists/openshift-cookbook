@@ -1,3 +1,8 @@
+---
+related:
+    - users-and-role-based-access-control/how-can-i-enable-an-image-to-run-as-a-set-user-id.md
+---
+
 When you deploy an application it will appear that it is running as a random user ID, overriding what user ID the image itself may specify that it should run as.
 
 The user ID isn't actually entirely random, but is an assigned user ID which is unique to your project. In fact, your project is assigned a range of user IDs that applications can be run as. The set of user IDs will not overlap with other projects. You can see what range is assigned to a project by running ``oc describe`` on the project.
