@@ -25,7 +25,7 @@
 
 ## Deploying Applications From Images
 
-* [How do I deploy an application image from DockerHub?](deploying-applications-from-images/how-do-i-deploy-an-application-image-from-dockerhub.md)
+* [How do I deploy a pre-existing application image?](deploying-applications-from-images/how-do-i-deploy-a-pre-existing-application-image.md)
 
 ## Building and Deploying From Source
 
