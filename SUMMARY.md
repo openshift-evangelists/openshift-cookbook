@@ -27,6 +27,11 @@
 
 * [How do I deploy a pre-existing application image?](deploying-applications-from-images/how-do-i-deploy-a-pre-existing-application-image.md)
 
+## Image Registry and Image Streams
+
+* [How do I import an image from an external image registry?](image-registry-and-image-streams/how-do-i-import-an-image-from-an-external-image.md)
+* [How to I push an image to the internal image registry?](image-registry-and-image-streams/how-do-i-push-an-image-to-the-internal-image-registry.md)
+
 ## Building and Deploying From Source
 
 ## Application Configuration and Secrets
@@ -51,8 +56,6 @@
 
 * [Why do my applications run as a random user ID?](users-and-role-based-access-control/why-do-my-applications-run-as-a-random-user-id.md)
 * [How can I enable an image to run as a set user ID?](users-and-role-based-access-control/how-can-i-enable-an-image-to-run-as-a-set-user-id.md)
-
-## Image Registry and Image Streams
 
 ## Service Catalog and Templates
 
