@@ -34,7 +34,8 @@ $ docker tag kubernetes/guestbook registry.pro-us-east-1.openshift.com:443/cookb
 You are then ready to push the image to the OpenShift internal image registry.
 
 ```
-$ The push refers to repository [registry.pro-us-east-1.openshift.com:443/cookbook/guestbook]
+$ docker push registry.pro-us-east-1.openshift.com:443/cookbook/guestbook
+The push refers to repository [registry.pro-us-east-1.openshift.com:443/cookbook/guestbook]
 5f70bf18a086: Layer already exists
 0b10d8731592: Pushed
 b08b5a92e747: Pushed
