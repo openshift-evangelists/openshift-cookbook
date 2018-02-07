@@ -11,11 +11,11 @@ If an image can't be modified, you can elect to override the default security co
 
 The change required to override the default security configuration, is to grant rights to the service account the application is run under, to run images as a set user ID.
 
-The service account within a project which applications would usually be run as is the ``default`` service account. Because you may run other applications in the same project, and don't necessarily want to override the user ID for all applications, create a new service account in the project which can be granted the special rights by running the ``oc create serviceaccount`` command, passing the name to be given to the service account.
+The service account within a project which applications would usually be run as is the ``default`` service account. Because you may run other applications in the same project, and don't necessarily want to override the user ID used for all applications, create a new service account which can be granted the special rights. In the project where the application is to run, run the ``oc create serviceaccount`` command, passing the name to be given to the service account.
 
 ```
-$ oc create serviceaccount supremo
-serviceaccount "supremo" created
+$ oc create serviceaccount runasanyuid
+serviceaccount "runasanyuid" created
 ```
 
 The next step is that which must be run as a cluster administrator. It is the granting of the appropriate rights to the service account. This is done by specifying that the service account should run with a specific security context constraint (SCC).
@@ -36,23 +36,18 @@ restricted         false     []        MustRunAs   MustRunAsRange     MustRunAs 
 
 By default applications would run under the ``restricted`` SCC. The ``MustRunAsRange`` value for ``RUNASUSER`` is what indicates that the application needs to run within the user ID range associated with the project.
 
-There are two options for which SCC to use when wanting to run the image as the user ID it defines. These are:
-
-* ``anyuid`` - This will enable the image to be run as any user ID, including the ``root`` user ID.
-* ``nonroot`` - This will enable the image to be run as any user ID, except the ``root`` user ID.
-
-If the image doesn't need to run as the ``root`` user ID, try and use ``nonroot`` instead of ``anyuid``. Do note though that for ``nonroot`` to work, the ``USER`` specified for the image, must be defined with a numeric user ID rather than a user name. If a user name is used, it is not possible to verify that it does in fact map to a user ID other than ``0``.
+To allow an application to be run as any user ID, including the ``root`` user ID, you want to use the ``anyuid`` SCC.
 
 To associate the new service account with the SCC, run the ``oc adm policy add-scc-to-user`` command. The ``-z`` option indicates to apply the command to the service account in the current project, so ensure you run this within the correct project.
 
 ```
-$ oc adm policy add-scc-to-user anyuid -z supremo --as system:admin
+$ oc adm policy add-scc-to-user anyuid -z runasanyuid --as system:admin
 ```
 
 With applications run under this service account now being able to run as any user ID, you need to update the deployment configuration for the application to use the service account. This can be done by patching the deployment configuration in place using the ``oc patch`` command.
 
 ```
-$ oc patch dc/minimal-notebook --patch '{"spec":{"template":{"spec":{"serviceAccountName": "supremo"}}}}'
+$ oc patch dc/minimal-notebook --patch '{"spec":{"template":{"spec":{"serviceAccountName": "runasanyuid"}}}}'
 deploymentconfig "minimal-notebook" patched
 ```
 
@@ -62,3 +57,78 @@ Once the deployment configuration has been updated, trigger a new deployment if 
 $ oc rollout latest minimal-notebook
 deploymentconfig "minimal-notebook" rolled out
 ```
+
+Allowing a user to run applications as any user ID will allow them to also run application images as ``root`` inside of the container. Because of the risks associated with allowing applications to run as ``root``, if ``root`` isn't required, use the ``nonroot`` SCC instead of ``anyuid``. This will allow an application to be run as any user ID except ``root``.
+
+Do note though that for ``nonroot`` to work, the ``USER`` specified for the image, must be defined with an integer user ID rather than a user name. If a user name is used, it is not possible to verify that it does in fact map to a user ID other than ``0``.
+
+If an image doesn't use an integer user ID for ``USER``, the alternative is to create a new SCC which enforces running as a single specific user ID.
+
+To do this for the user ID ``1000``, create a file ``uid1000.json`` containing:
+
+```
+{
+    "apiVersion": "v1",
+    "kind": "SecurityContextConstraints",
+    "metadata": {
+        "name": "uid1000"
+    },
+    "requiredDropCapabilities": [
+        "KILL",
+        "MKNOD",
+        "SYS_CHROOT",
+        "SETUID",
+        "SETGID"
+    ],
+    "runAsUser": {
+        "type": "MustRunAs",
+        "uid": "1000"
+    },
+    "seLinuxContext": {
+        "type": "MustRunAs"
+    },
+    "supplementalGroups": {
+        "type": "RunAsAny"
+    },
+    "fsGroup": {
+        "type": "MustRunAs"
+    },
+    "volumes": [
+        "configMap",
+        "downwardAPI",
+        "emptyDir",
+        "persistentVolumeClaim",
+        "projected",
+        "secret"
+    ]
+}
+```
+
+To create the new SCC, you need to be an administrator.
+
+```
+$ oc create -f uid1000.json --as system:admin
+securitycontextconstraints "uid1000" created
+```
+
+Create the service account in the project:
+
+```
+$ oc create serviceaccount runasuid1000
+serviceaccount "runasuid1000" created
+```
+
+Set the SCC to be used by the service account to that created above.
+
+```
+$ oc adm policy add-scc-to-user uid1000 -z runasuid1000 --as system:admin
+```
+
+Finally patch the deployment configuration.
+
+```
+$ oc patch dc/minimal-notebook --patch '{"spec":{"template":{"spec":{"serviceAccountName": "runasuid1000"}}}}'
+deploymentconfig "minimal-notebook" patched
+```
+
+For a SCC which sets ``runAsUser`` to be ``MustRunAs`` and provides a set user ID, when the application is run, it will be forced to run as that user ID, overriding whatever user ID the image may have specified. Whether the image sets ``USER`` to a user name rather than an integer user ID therefore doesn't matter. The SCC just needs to use the same integer user ID that the user name maps to for the image.
