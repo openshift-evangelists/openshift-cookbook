@@ -39,7 +39,7 @@
 ## Services, Networking and Routing
 
 * [Can I use a custom domain name with OpenShift Online?](services-networking-and-routing/can-i-use-a-custom-domain-name-with-openshift-online.md)
-* [Can I discover running pods using DNS SRV record entries?]()
+* [Can I discover running pods using DNS SRV record entries?](services-networking-and-routing/can-i-discover-running-pods-using-dns-srv-record-entries.md)
 
 ## Storing Data in Persistent Volumes
 
