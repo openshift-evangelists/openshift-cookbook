@@ -6,7 +6,7 @@ Do note that by using an affinity rule to have all pods scheduled to the same no
 
 In the case of a rolling deployment, there also needs to be enough resources to create additional pods on top of the number defined by the replica count.
 
-If the node becomes unavailable, the application will become unavailable, until they can be restarted on a different node, as you do not benefit from the fact that the pods would be distributed across nodes in a cluster.
+If the node becomes unavailable, the application will become unavailable, until the pods can be restarted on a different node, as you do not benefit from the fact that the pods would be distributed across nodes in a cluster.
 
 To add the affinity rule, you need to edit the deployment configuration and add a ``spec.template.spec.affinity`` entry.  The pod affinity type ``requiredDuringSchedulingIgnoredDuringExecution`` should be used.
 
