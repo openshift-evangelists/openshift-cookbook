@@ -42,6 +42,8 @@
 
 ## Storing Data in Persistent Volumes
 
+* [Can I scale an application using an RWO persistent volume?](storing-data-in-persistent-volumes/can-i-scale-an-application-using-an-rwo-persistent-volume.md)
+
 ## Resources Quotas and Limits
 
 ## Monitoring Application Health
