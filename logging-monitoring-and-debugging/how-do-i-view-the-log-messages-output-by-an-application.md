@@ -3,7 +3,7 @@ When running applications in containers, any messages logged by the application 
 To get a list of the pods for an application, you can use ``oc get pods``.
 
 ```
-$ $ oc get pods
+$ oc get pods
 NAME               READY     STATUS      RESTARTS   AGE
 nbviewer-1-wgzdb   1/1       Running     0          3h
 ```

@@ -1,5 +1,7 @@
+---
 related:
     - logging-monitoring-and-debugging/how-do-i-access-an-interactive-shell-inside-of-a-container.md
+---
 
 If your application is failing on startup, with the container also being terminated, OpenShift will keep attempting to restart it. If this keeps happening, the deployment will fail. OpenShift will indicate this by setting the status of the pod to ``CrashLoopBackOff``.
 
@@ -32,5 +34,3 @@ $ oc rsh nbviewer-debug
 (app-root)sh-4.2$ curl $HOSTNAME:8080
 ...
 ```
-
-Because any persistent volumes defined in the deployment configuration will also be mounted, if you are using a persistent volume type of ``ReadWriteOnce``, you will first need to scale down the application by running ``oc scale --replicas=0``; otherwise, the debug container will not be able to mount the persistent volume at the same time and will fail to start.
