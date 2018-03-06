@@ -32,7 +32,7 @@
 * [How do I import an image from an external image registry?](image-registry-and-image-streams/how-do-i-import-an-image-from-an-external-image.md)
 * [How do I push an image to the internal image registry?](image-registry-and-image-streams/how-do-i-push-an-image-to-the-internal-image-registry.md)
 
-## Building and Deploying From Source
+[//]: # (## Building and Deploying From Source)
 
 ## Application Configuration and Secrets
 
@@ -47,13 +47,13 @@
 
 * [How can I scale applications using RWO persistent volumes?](storing-data-in-persistent-volumes/how-can-i-scale-applications-using-rwo-persistent-volumes.md)
 
-## Resources Quotas and Limits
+[//]: # (## Resources Quotas and Limits)
 
-## Monitoring Application Health
+[//]: # (## Monitoring Application Health)
 
-## Application Lifecycle Management
+[//]: # (## Application Lifecycle Management)
 
-## Logging, Monitoring and Debugging
+[//]: # (## Logging, Monitoring and Debugging)
 
 ## Working with Resources Objects
 
@@ -64,8 +64,8 @@
 * [Why do my applications run as a random user ID?](users-and-role-based-access-control/why-do-my-applications-run-as-a-random-user-id.md)
 * [How can I enable an image to run as a set user ID?](users-and-role-based-access-control/how-can-i-enable-an-image-to-run-as-a-set-user-id.md)
 
-## Service Catalog and Templates
+[//]: # (## Service Catalog and Templates)
 
-## Automated CI/CD Build Pipelines
+[//]: # (## Automated CI/CD Build Pipelines)
 
-## Java Application Middleware
+[//]: # (## Java Application Middleware)
