@@ -55,6 +55,8 @@
 
 ## Working with Resources Objects
 
+* [How do I delete all resource objects for an application?](working-with-resource-objects/how-do-i-delete-all-resource-objects-for-an-application.md)
+
 ## Users and Role Based Access Control
 
 * [Why do my applications run as a random user ID?](users-and-role-based-access-control/why-do-my-applications-run-as-a-random-user-id.md)
