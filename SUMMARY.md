@@ -36,6 +36,8 @@
 
 ## Application Configuration and Secrets
 
+* [How do I pass an environment variable to an application?](application-configuration-and-secrets/how-do-i-pass-an-environment-variable-to-an-application.md)
+
 ## Services, Networking and Routing
 
 * [Can I use a custom domain name with OpenShift Online?](services-networking-and-routing/can-i-use-a-custom-domain-name-with-openshift-online.md)
