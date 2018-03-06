@@ -2,7 +2,7 @@
 
 ## OpenShift Container Platform
 
-* [What is OpenShift?](openshift-container-platform/what-is-openshift.md)
+* [What is the OpenShift container platform?](openshift-container-platform/what-is-the-openshift-container-platform.md)
 * [What is the difference between OpenShift and Kubernetes?](openshift-container-platform/what-is-the-difference-between-openshift-and-kubernetes.md)
 * [What books are available about OpenShift?](openshift-container-platform/what-books-are-available-about-openshift.md)
 * [Where can I try out OpenShift to see what it is like?](openshift-container-platform/where-can-i-try-out-openshift-to-see-what-it-is-like.md)
