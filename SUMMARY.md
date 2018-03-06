@@ -41,11 +41,11 @@
 ## Services, Networking and Routing
 
 * [Can I use a custom domain name with OpenShift Online?](services-networking-and-routing/can-i-use-a-custom-domain-name-with-openshift-online.md)
-* [Can I discover running pods using DNS SRV record entries?](services-networking-and-routing/can-i-discover-running-pods-using-dns-srv-record-entries.md)
+* [How can I discover running pods using DNS SRV records?](services-networking-and-routing/how-can-i-discover-running-pods-using-dns-srv-records.md)
 
 ## Storing Data in Persistent Volumes
 
-* [Can I scale an application using an RWO persistent volume?](storing-data-in-persistent-volumes/can-i-scale-an-application-using-an-rwo-persistent-volume.md)
+* [How can I scale applications using RWO persistent volumes?](storing-data-in-persistent-volumes/how-can-i-scale-applications-using-rwo-persistent-volumes.md)
 
 ## Resources Quotas and Limits
 
