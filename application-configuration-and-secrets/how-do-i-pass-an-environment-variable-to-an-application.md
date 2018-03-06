@@ -31,7 +31,7 @@ $ oc set env dc/your-app-name \
 
 If you need the value to include the literal string of form ``$(<VARNAME>)``, use ``$$(<VARNAME>)`` to prevent it from being interpreted. The result will be passed through as ``$(<VARNAME>)``.
 
-To list the names and values of the environment variables run the ``oc set env`` command, passing the name of the resource object as an argument and using the ``--list`` option:
+To list the names and values of the environment variables run the ``oc set env`` command and pass the ``--list`` option:
 
 ```
 set env dc/your-app-name --list
