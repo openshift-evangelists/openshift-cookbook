@@ -73,3 +73,8 @@
 [//]: # (## Automated CI/CD Build Pipelines)
 
 [//]: # (## Java Application Middleware)
+
+## Contributing to this Cookbook
+
+* [How can I suggest a topic to be covered by this site?](contributing-to-this-cookbook/how-can-i-suggest-a-topic-to-be-covered-by-this-site.md)
+* [How can I report a problem with information on this site?](contributing-to-this-cookbook/how-can-i-report-a-problem-with-information-on-this-site.md)
