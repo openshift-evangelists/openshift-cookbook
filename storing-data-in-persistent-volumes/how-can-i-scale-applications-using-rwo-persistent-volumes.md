@@ -3,7 +3,7 @@ related:
     - application-lifecycle-management/how-can-i-change-the-deployment-strategy-being-used.md
 ---
 
-A persistent volume of type _ReadWriteOnce_ (RWO) can be mounted on only one node in an OpenShift cluster at a time. An application using an RWO persistent volume can not use rolling deployments or be scaled up to multiple replicas. This is because there is no guarantee, by default, that all pods will be deployed to the same node in the cluster.
+A persistent volume of type ``ReadWriteOnce`` (RWO) can be mounted on only one node in an OpenShift cluster at a time. An application using an RWO persistent volume can not use rolling deployments or be scaled up to multiple replicas. This is because there is no guarantee, by default, that all pods will be deployed to the same node in the cluster.
 
 If you need to be able to use rolling deployments or scale an application, and only have RWO persistent volumes available, you can set an affinity rule for pods so they will all be scheduled to the same node.
 
