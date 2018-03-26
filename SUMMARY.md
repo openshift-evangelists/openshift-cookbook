@@ -51,7 +51,9 @@
 
 [//]: # (## Monitoring Application Health)
 
-[//]: # (## Application Lifecycle Management)
+## Application Lifecycle Management
+
+* [How can I change the deployment strategy being used?](application-lifecycle-management/how-can-i-change-the-deployment-strategy-being-used.md)
 
 ## Logging, Monitoring and Debugging
 
