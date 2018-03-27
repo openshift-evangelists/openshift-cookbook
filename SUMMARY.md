@@ -33,7 +33,9 @@
 * [How do I import an image from an external image registry?](image-registry-and-image-streams/how-do-i-import-an-image-from-an-external-image.md)
 * [How do I push an image to the internal image registry?](image-registry-and-image-streams/how-do-i-push-an-image-to-the-internal-image-registry.md)
 
-[//]: # (## Building and Deploying From Source)
+## Building and Deploying From Source
+
+* [How can I increase the amount of memory a build can use?](building-and-deploying-from-source/how-can-i-increase-the-amount-of-memory-a-build-can-use.md)
 
 ## Application Configuration and Secrets
 
