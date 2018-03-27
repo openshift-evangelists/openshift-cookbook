@@ -16,6 +16,7 @@
 * [What URL do I use when logging in from the command line?](accessing-an-openshift-cluster/what-url-do-i-use-when-logging-if-from-the-command-line.md)
 * [Why do I keep having to login from the command line?](accessing-an-openshift-cluster/why-do-i-keep-having-to-login-from-the-command-line.md)
 * [How can I create a service account for scripted access?](accessing-an-openshift-cluster/how-can-i-create-a-service-account-for-scripted-access.md)
+* [Where can I find REST API client libraries for OpenShift?](accessing-an-openshift-cluster/where-can-i-find-rest-api-client-libraries-for-openshift.md)
 
 ## Projects and User Collaboration
 
