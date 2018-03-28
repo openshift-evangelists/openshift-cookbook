@@ -36,7 +36,7 @@
 ## Building and Deploying From Source
 
 * [How can I increase the amount of memory a build can use?](building-and-deploying-from-source/how-can-i-increase-the-amount-of-memory-a-build-can-use.md)
-* [How can I update the version of pip used by Python S2I builder?](building-and-deploying-from-source/how-can-i-update-the-version-of-pip-used-by-the-python-s2i-builder.md)
+* [How can I upgrade pip when using the Python S2I builder?](building-and-deploying-from-source/how-can-i-upgrade-pip-when-using-the-python-s2i-builder.md)
 
 ## Application Configuration and Secrets
 
