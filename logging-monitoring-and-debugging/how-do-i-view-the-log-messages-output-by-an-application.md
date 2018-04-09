@@ -1,3 +1,8 @@
+---
+related:
+    - logging-monitoring-and-debugging/what-output-of-an-application-is-captured-as-log-messages.md
+---
+
 When running applications in containers, any messages logged by the application to the standard output and error streams will be captured. To view the messages produced by a specific instance of the application, you need to run ``oc logs`` on the pod in which it is running.
 
 To get a list of the pods for an application, you can use ``oc get pods``.

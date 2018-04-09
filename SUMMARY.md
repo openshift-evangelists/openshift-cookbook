@@ -62,6 +62,7 @@
 ## Logging, Monitoring and Debugging
 
 * [How do I view the log messages output by an application?](logging-monitoring-and-debugging/how-do-i-view-the-log-messages-output-by-an-application.md)
+* [What output of an application is captured as log messages?](logging-monitoring-and-debugging/what-output-of-an-application-is-captured-as-log-messages.md)
 * [How do I access an interactive shell inside of a container?](logging-monitoring-and-debugging/how-do-i-access-an-interactive-shell-inside-of-a-container.md)
 * [How do I debug an application that fails to start up?](logging-monitoring-and-debugging/how-do-i-debug-an-application-that-fails-to-start-up.md)
 
