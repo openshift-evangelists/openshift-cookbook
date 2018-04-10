@@ -8,7 +8,7 @@ If a user needs to be able to run ``oc`` commands as a cluster admin when logged
 $ oc get nodes --as system:admin
 ```
 
-By requiring the extra step of needing to explicitly say you want to impersonate the ``system:admin``, it makes it harder to make mistakes where you accidentally modify or delete resources objects you wouldn't normally have the access rights to modify.
+By requiring the extra step of needing to explicitly say you want to impersonate the ``system:admin``, it makes it harder to make mistakes where you accidentally modify or delete resource objects you wouldn't normally have the access rights to modify.
 
 Adding the ``sudoer`` role to a user can only be done by a user with existing cluster admin access. This is done using the ``oc adm policy add-cluster-role-to-user`` command.
 
