@@ -11,7 +11,7 @@ You can access this REST API endpoint directly using a HTTP client such as ``cur
 #!/bin/sh
 
 SERVER=`oc whoami --show-server`
-TOKEN=`oc whoami --token`
+TOKEN=`oc whoami --show-token`
 
 URL="$SERVER/oapi/v1/users/~"
 
