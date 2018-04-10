@@ -15,4 +15,4 @@ Using this special file under the ``/proc`` filesystem path will result in log m
 
 Note that if the logging framework used by the application, or any supervisor system, uses log file rotation, it should be disabled. The logging framework should not attempt to rename this special file, or replace it.
 
-It is also recommended that you avoid using the special file ``/proc/self/fd/1``. This equates to standard output of the process it is used with, which if it were a sub process, would not result in it being captured if output from the sub process was being redirected to a file.
+It is also recommended that you avoid using the special files ``/proc/self/fd/1`` or ``/dev/stdout``. These equate to standard output of the process it is used with, which if it were a sub process, may not result in it being captured if output from the sub process was being redirected.
