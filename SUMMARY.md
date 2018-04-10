@@ -75,6 +75,7 @@
 * [Why do my applications run as a random user ID?](users-and-role-based-access-control/why-do-my-applications-run-as-a-random-user-id.md)
 * [How can I enable an image to run as a set user ID?](users-and-role-based-access-control/how-can-i-enable-an-image-to-run-as-a-set-user-id.md)
 * [How do I enable REST API access for an application?](users-and-role-based-access-control/how-do-i-enable-rest-api-access-for-an-application.md)
+* [How do I enable a user to run commands as a cluster admin?](users-and-role-based-access-control/how-do-i-enable-a-user-to-run-commands-as-a-cluster-admin.md)
 
 [//]: # (## Service Catalog and Templates)
 
