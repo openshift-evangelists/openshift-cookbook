@@ -2,7 +2,7 @@ If a user manages an OpenShift cluster and is able to login to the nodes of the 
 
 It is possible to add roles to a normal user account which gives them the rights to do anything a cluster admin can do when logged in remotely, but this should be avoided if possible.
 
-If a user needs to be able to run ``oc`` commands as a cluster admin when logged in remotely, it is better to add that user to the ``sudoer`` role. When in this role, and they run an ``oc`` command, it would still run with the access rights of their user. To run an ``oc`` command as a cluster admin, they use the ability granted by the ``sudoer`` role, to impersonate the special user called ``system:admin``. This is done by supplying the ``--as system:admin`` command to the ``oc`` command.
+If a user needs to be able to run ``oc`` commands as a cluster admin when logged in remotely, it is better to add that user to the ``sudoer`` role. When in this role, and they run an ``oc`` command, it would still run with the access rights of their user. To run an ``oc`` command as a cluster admin, they use the ability granted by the ``sudoer`` role, to impersonate the special user called ``system:admin``. This is done by supplying the ``--as system:admin`` option to the ``oc`` command.
 
 ```
 $ oc get nodes --as system:admin
