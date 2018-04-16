@@ -43,7 +43,7 @@ Instead of granting the role to a user, the role could also be granted to a serv
 
 ```
 $ oc create sa serviceaccountname
-$ oc adm policy add-cluster-role-to-user impersonate-group -z serviceaccountname -n projectname
+$ oc adm policy add-cluster-role-to-user impersonate-usergroup -z serviceaccountname -n projectname
 ```
 
 Having created the service account and added the role to it, you would then run the application as that service account. Any users which the application needed to create projects and application deployments for, would then be added to the group ``groupname``.
