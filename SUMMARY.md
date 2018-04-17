@@ -37,7 +37,10 @@
 
 * [How can I build from local source instead of a Git repository?](building-and-deploying-from-source/how-can-i-build-from-local-source-instead-of-a-git-repository.md)
 * [How can I increase the amount of memory a build can use?](building-and-deploying-from-source/how-can-i-increase-the-amount-of-memory-a-build-can-use.md)
-* [How can I upgrade pip when using the Python S2I builder?](building-and-deploying-from-source/how-can-i-upgrade-pip-when-using-the-python-s2i-builder.md)
+
+## Building and Deploying Python Applications
+
+* [How can I upgrade pip when using the Python S2I builder?](building-and-deploying-python-applications/how-can-i-upgrade-pip-when-using-the-python-s2i-builder.md)
 
 ## Application Configuration and Secrets
 
@@ -82,8 +85,6 @@
 [//]: # (## Service Catalog and Templates)
 
 [//]: # (## Automated CI/CD Build Pipelines)
-
-[//]: # (## Java Application Middleware)
 
 ## Contributing to this Cookbook
 
