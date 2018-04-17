@@ -1,6 +1,7 @@
 ---
 related:
     - projects-and-user-collaboration/how-do-i-allow-another-user-to-work-on-my-project.md
+    users-and-role-based-access-control/how-do-i-enable-a-user-to-run-commands-as-a-cluster-admin.md
 ---
 
 If multiple users need to collaborate together on the development or management of an application, you would grant each separate user needing access to the application, a role in the project the application is deployed in. A separate login is used for each user. You should not create a single user and share login credentials as then you cannot control separately what each user can do, and revoking access to one user means changing the login credentials of the single account, affecting all users.
