@@ -22,7 +22,7 @@ These can be used by the application, or in a script, running in the container t
 ```
 #!/bin/sh
 
-SERVER=`https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_SERVICE_PORT`
+SERVER="https://$KUBERNETES_SERVICE_HOST:$KUBERNETES_SERVICE_PORT"
 TOKEN=`cat /var/run/secrets/kubernetes.io/serviceaccount/token`
 
 URL="$SERVER/oapi/v1/users/~"
