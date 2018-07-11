@@ -25,21 +25,22 @@ Tokens:             robot-token-4nkdw
 
 Secrets for two access tokens will be created.
 
-One will be mounted into any containers which are run as this service account to allow an application running in the container to access the REST API if required.
+One is mounted into any containers which are run as this service account to allow an application running in the container to access the REST API if required.
 
-The second can be used from outside of the OpenShift cluster as an access token to login from the command line, or when using the OpenShift REST API.
+The second is referenced in the separate secret for the docker configuration used when pulling images from the internal docker registry.
+
+Of the two tokens, the first token, which would normally be used from within containers running with this service account to access the REST API, also be used when accessing the REST API from outside of the cluster.
 
 To view the access token, run ``oc describe`` on the secret.
 
 ```
-$ oc describe secret robot-token-4nkdw
-Name:        robot-token-4nkdw
+$ oc describe secret robot-token-mhf9x
+Name:        robot-token-mhf9x
 Namespace:   cookbook
 Labels:      <none>
-Annotations: kubernetes.io/created-by=openshift.io/create-dockercfg-secrets
-             kubernetes.io/service-account.name=robot
+Annotations: kubernetes.io/service-account.name=robot
 
-Type:	kubernetes.io/service-account-token
+Type:        kubernetes.io/service-account-token
 
 Data
 ====
@@ -52,8 +53,8 @@ token:          eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...
 The token will not expire. If you need to revoke the access token you can delete the secret for the access token using ``oc delete`` and a new secret will be created.
 
 ```
-$ oc delete secret robot-token-4nkdw
-secret "robot-token-4nkdw" deleted
+$ oc delete secret robot-token-mhf9x
+secret "robot-token-mhf9x" deleted
 ```
 
 The service account, along with any secrets associated with it, can be deleted by running ``oc delete`` against the service account.
