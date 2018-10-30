@@ -65,7 +65,6 @@ When you are done with setting the permissions for the personal access token, cl
 Create the secret from the command line using the ``oc create secret`` command.
 
 ```
-
 $ oc create secret generic user-at-bitbucket \
     --from-literal=username=machineuser \
     --from-literal=password=accesstoken \

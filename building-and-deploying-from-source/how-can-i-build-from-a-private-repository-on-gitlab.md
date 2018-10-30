@@ -63,7 +63,6 @@ When you are done with setting the scopes for the personal access token, click o
 Create the secret from the command line using the ``oc create secret`` command.
 
 ```
-
 $ oc create secret generic user-at-gitlab \
     --from-literal=username=machineuser \
     --from-literal=password=accesstoken \
