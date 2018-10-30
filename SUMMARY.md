@@ -62,6 +62,7 @@
 ## Application Lifecycle Management
 
 * [How can I change the deployment strategy being used?](application-lifecycle-management/how-can-i-change-the-deployment-strategy-being-used.md)
+* [How can I trigger a new deployment of an application?](application-lifecycle-management/how-can-i-trigger-a-new-deployment-of-an-application.md)
 
 ## Logging, Monitoring and Debugging
 
