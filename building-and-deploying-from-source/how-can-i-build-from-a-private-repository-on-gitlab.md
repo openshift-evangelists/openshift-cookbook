@@ -59,3 +59,18 @@ GitLab doesn’t provide a way of setting the scope of a personal access token s
 Giving full control is not ideal as it means that anyone who gets control over the personal access token would also be able to write to any repositories the account has write access to. This is one of the reasons why read-only repository SSH keys bound to a specific repository are preferred.
 
 When you are done with setting the scopes for the personal access token, click on **Create personal access token** and you will be shown the value of the token. Make sure you make a copy of this as you cannot view it later on in the GitLab settings.
+
+Create the secret from the command line using the ``oc create secret`` command, remembering to run ``oc secrets link`` to allow the builder service account to use it.
+
+```
+$ oc secrets link builder user-at-gitlab
+
+$ oc create secret generic user-at-gitlab \
+    --from-literal=username=machineuser \
+    --from-literal=password=accesstoken \
+    --type=kubernetes.io/basic-auth
+```
+
+You will need to supply the name of the user account which the personal access token was created under as ``username``. It is better to create a machine user account for an organization, which has access to the repository, rather than use a personal user account. Also supply the access token as the ``password``.
+
+To create a new build and deployment using ``oc new-app``, which uses this source secret, supply the ``--source-secret`` option to ``oc new-app``, passing the name of the secret. Similarly, supply ``--source-secret`` to ``oc new-build`` if creating just a build.
