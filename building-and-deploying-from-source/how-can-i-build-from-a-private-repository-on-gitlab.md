@@ -60,10 +60,9 @@ Giving full control is not ideal as it means that anyone who gets control over t
 
 When you are done with setting the scopes for the personal access token, click on **Create personal access token** and you will be shown the value of the token. Make sure you make a copy of this as you cannot view it later on in the GitLab settings.
 
-Create the secret from the command line using the ``oc create secret`` command, remembering to run ``oc secrets link`` to allow the builder service account to use it.
+Create the secret from the command line using the ``oc create secret`` command.
 
 ```
-$ oc secrets link builder user-at-gitlab
 
 $ oc create secret generic user-at-gitlab \
     --from-literal=username=machineuser \
@@ -71,6 +70,12 @@ $ oc create secret generic user-at-gitlab \
     --type=kubernetes.io/basic-auth
 ```
 
-You will need to supply the name of the user account which the personal access token was created under as ``username``. It is better to create a machine user account for an organization, which has access to the repository, rather than use a personal user account. Also supply the access token as the ``password``.
+You will need to supply the name of the user account which the personal access token was created under as the value to ``username``. It is better to create a machine user account for an organization, which has access to the repository, rather than use a personal user account. Also supply the access token as the value to ``password``.
+
+Run ``oc secrets link`` to allow the builder service account to use it.
+
+```
+$ oc secrets link builder user-at-gitlab
+```
 
 To create a new build and deployment using ``oc new-app``, which uses this source secret, supply the ``--source-secret`` option to ``oc new-app``, passing the name of the secret. Similarly, supply ``--source-secret`` to ``oc new-build`` if creating just a build.
