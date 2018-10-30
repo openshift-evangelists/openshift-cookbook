@@ -74,6 +74,7 @@
 ## Working with Resources Objects
 
 * [How do I delete all resource objects for an application?](working-with-resource-objects/how-do-i-delete-all-resource-objects-for-an-application.md)
+* [How can I selectively display attributes of a resource?](working-with-resource-objects/how-can-i-selectively-display-attributes-of-a-resource.md)
 
 ## Users and Role Based Access Control
 
