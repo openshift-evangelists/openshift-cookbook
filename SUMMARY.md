@@ -37,7 +37,7 @@
 
 * [How can I build from local source instead of a Git repository?](building-and-deploying-from-source/how-can-i-build-from-local-source-instead-of-a-git-repository.md)
 * [How can I increase the amount of memory a build can use?](building-and-deploying-from-source/how-can-i-increase-the-amount-of-memory-a-build-can-use.md)
-* [How can I build from a private repository on GitLab?]()
+* [How can I build from a private repository on GitLab?](building-and-deploying-from-source/how-can-i-build-from-a-private-repository-on-gitlab.md)
 
 ## Building and Deploying Python Applications
 

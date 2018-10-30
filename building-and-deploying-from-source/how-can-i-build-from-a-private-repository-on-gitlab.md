@@ -47,3 +47,15 @@ If you have an existing build configuration that you need to update to use the s
 ```
 $ oc set build-secret mysite repo-at-gitlab --source
 ```
+
+If the OpenShift cluster you are using is located behind a corporate firewall and SSH connections are blocked, you need to use a personal access token and HTTPS connection rather than SSH.
+
+From the web interface of GitLab, browse to your user *Settings* and then select *Access Tokens*.
+
+Enter in a name for the token and enable the ``api`` checkbox.
+
+GitLab doesn’t provide a way of setting the scope of a personal access token such that it has read-only access to repositories. One instead has to enable the api scope which gives full control of private repositories.
+
+Giving full control is not ideal as it means that anyone who gets control over the personal access token would also be able to write to any repositories the account has write access to. This is one of the reasons why read-only repository SSH keys bound to a specific repository are preferred.
+
+When you are done with setting the scopes for the personal access token, click on **Create personal access token** and you will be shown the value of the token. Make sure you make a copy of this as you cannot view it later on in the GitLab settings.
