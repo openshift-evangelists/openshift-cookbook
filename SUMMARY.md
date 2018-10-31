@@ -37,6 +37,7 @@
 
 * [How can I build from local source instead of a Git repository?](building-and-deploying-from-source/how-can-i-build-from-local-source-instead-of-a-git-repository.md)
 * [How can I increase the amount of memory a build can use?](building-and-deploying-from-source/how-can-i-increase-the-amount-of-memory-a-build-can-use.md)
+* [How can I build from a private repository on GitHub?](building-and-deploying-from-source/how-can-i-build-from-a-private-repository-on-github.md)
 * [How can I build from a private repository on GitLab?](building-and-deploying-from-source/how-can-i-build-from-a-private-repository-on-gitlab.md)
 * [How can I build from a private repository on Bitbucket?](building-and-deploying-from-source/how-can-i-build-from-a-private-repository-on-bitbucket.md)
 
